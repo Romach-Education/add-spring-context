@@ -6,22 +6,6 @@
 
 File > New project > Java
 
-## Create entity class
-
-```java
-public class Parrot {
-    private String name;
-    
-    public Parrot(String name) {
-        this.name = name;
-    }
-    
-    public String getName() {
-        return name;
-    }
-}
-```
-
 ## Add Spring Context dependency
 
 ```xml
