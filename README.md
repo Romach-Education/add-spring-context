@@ -21,3 +21,42 @@ File > New project > Java
 ```java
 ApplicationContext context = new AnnotationConfigApplicationContext();
 ```
+
+## Add tests
+
+### Add dependency for Spring TestContext Framework
+
+```xml
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-test</artifactId>
+    <version>6.1.10</version>
+    <scope>test</scope>
+</dependency>
+```
+
+### Add dependency for JUnit
+
+```xml
+<dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-engine</artifactId>
+    <version>5.11.0-M2</version>
+    <scope>test</scope>
+</dependency>
+```
+
+### Create test to check that application context is created
+
+```java
+public class ApplicationTests {
+
+    @Test
+    @DisplayName("Checks that Application Context is created")
+    public void checkApplicationContextCreated() {
+        ApplicationContext context = new AnnotationConfigApplicationContext();
+
+        assertNotNull(context);
+    }
+}
+```
